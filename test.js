@@ -130,6 +130,6 @@ const fixturesNot = [
 ];
 test("Non-crypto", async (t) => {
   for (const x of fixturesNot) {
-    t.is(await m(x), "Cryptocurrency could not be detected");
+    t.is(await m(x), false);
   }
 });

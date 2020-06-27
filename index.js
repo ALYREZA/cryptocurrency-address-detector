@@ -17,7 +17,7 @@ function detectCrypto(address) {
   else if (dashRegex({ exact: true }).test(address)) return "Dash";
   else if (bitcoincashRegex.format("cashaddr", { exact: true }).test(address))
     return "BitcoinCash";
-  else return "Cryptocurrency could not be detected";
+  else return false;
 }
 
 module.exports = (dests, opts) => {
